@@ -3,15 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Character Counter</title>
+  <title>Counter with Description</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Number/Character Counter</h1>
-    <textarea id="inputText" placeholder="Enter numbers or characters here..."></textarea>
-    <button id="countButton">Count</button>
-    <p id="result">Result: <span id="count">0</span></p>
+    <!-- Counter Section -->
+    <div class="counter-window">
+      <h1>Number/Character Counter</h1>
+      <textarea id="inputText" placeholder="Enter numbers or characters here..."></textarea>
+      <button id="countButton">Count</button>
+      <p>Result: <span id="count">0</span></p>
+    </div>
+
+    <!-- Description Section -->
+    <div class="description-window">
+      <h1>Description</h1>
+      <p>This tool helps you count how many numbers or characters are in your input. Just type or paste your text into the box, click the **Count** button, and see the result instantly. It works for any combination of numbers, letters, and special characters!</p>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
