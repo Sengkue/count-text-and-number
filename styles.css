@@ -82,7 +82,8 @@ p {
   line-height: 1.6;
 }
 
-#count {
+#count,
+#countNoSpaces {
   font-weight: bold;
   color: #6a11cb;
 }
