@@ -3,25 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Counter with Description</title>
+  <title>Counter Tool</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <!-- Counter Section -->
+    <!-- First Window: Count All Characters -->
     <div class="counter-window">
-      <h1>Number/Character Counter</h1>
-      <textarea id="inputText" placeholder="Enter numbers or characters here..."></textarea>
+      <h1>Character Counter</h1>
+      <textarea id="inputText" placeholder="Enter text or numbers here..."></textarea>
       <button id="countButton">Count</button>
-      <p>Result: <span id="count">0</span></p>
+      <p>Result (All Characters): <span id="count">0</span></p>
     </div>
 
-    <!-- Description Section -->
+    <!-- Second Window: Count Text or Numbers Only (No Spaces) -->
     <div class="description-window">
-      <h1>Description</h1>
-      <p>This tool helps you count how many numbers or characters are in your input. Just type or paste your text into the box, click the **Count** button, and see the result instantly. It works for any combination of numbers, letters, and special characters!</p>
+      <h1>Count Without Spaces</h1>
+      <p>This counter ignores all spaces in your input.</p>
+      <textarea id="inputTextNoSpaces" placeholder="Enter text or numbers without spaces..."></textarea>
+      <button id="countNoSpacesButton">Count</button>
+      <p>Result (No Spaces): <span id="countNoSpaces">0</span></p>
     </div>
   </div>
-  <script src="script.js"></script>
-</body>
-</html>
+  <script>
+    // First Counter: Count all characters
+    document.getElementById('countButton').addEventListener('click', function () {
+      const inputText = document.getElementById('inputText').value;
+      const count = inputText.length;
+      document.getElementById('count').textContent = count;
+    });
+
+    //
