@@ -25,13 +25,14 @@ body {
   padding: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   color: #333;
-  max-width: 800px;
+  max-width: 1200px;
   width: 100%;
 }
 
 .counter-window,
-.description-window {
-  flex: 1 1 calc(50% - 20px);
+.description-window,
+.word-counter-window {
+  flex: 1 1 calc(33.333% - 20px);
   background: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
@@ -39,7 +40,8 @@ body {
 }
 
 .counter-window h1,
-.description-window h1 {
+.description-window h1,
+.word-counter-window h1 {
   font-size: 22px;
   color: #6a11cb;
   margin-bottom: 15px;
@@ -83,14 +85,16 @@ p {
 }
 
 #count,
-#countNoSpaces {
+#countNoSpaces,
+#countWords {
   font-weight: bold;
   color: #6a11cb;
 }
 
 @media (max-width: 768px) {
   .counter-window,
-  .description-window {
+  .description-window,
+  .word-counter-window {
     flex: 1 1 100%;
   }
 }
